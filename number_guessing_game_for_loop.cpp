@@ -27,7 +27,11 @@ int main() {
         try {
             integerAsNumber = std::stoi(integerAsString);
 
-            if (integerAsNumber == someRandomNumber) {
+            if (integerAsNumber < 0) {
+                // output
+                std::cout << "This number is a negative";
+                std::cout << "" << std::endl;
+            } else if (integerAsNumber == someRandomNumber) {
                 // output
                 std::cout << "You are right!";
                 std::cout << "" << std::endl;
@@ -39,7 +43,8 @@ int main() {
                 std::cout << "" << std::endl;
             }
         } catch (std::invalid_argument) {
-            std::cout << "That was not an integer";
+            std::cout << "That was not an integer ";
+            std::cout << "" << std::endl;
         }
         }
 }
